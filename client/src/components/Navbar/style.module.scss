@@ -5,7 +5,7 @@
     align-items: center;
     position: fixed;
     z-index: 999;
-    background-color: white;
+    // background-color: white;
     .container{
         width: 1200px;
         margin: 0 auto;
@@ -97,4 +97,10 @@
             }
         }
     }
+}
+.color{
+    background-color: white;
+}
+.transparent{
+    background-color: transparent;
 }

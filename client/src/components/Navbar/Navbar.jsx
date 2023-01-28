@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiSearch } from 'react-icons/fi';
 import { MdShoppingCart } from 'react-icons/md';
@@ -7,9 +7,19 @@ import styled from './style.module.scss'
 import { useSelector } from 'react-redux';
 const Navbar = () => {
 const data = useSelector((state)=> state.addToFav.value)
-
+const [scroll,setScroll] = useState(false)
+window.onscroll = function(){
+  let scrool = window.pageYOffset;
+  if(300<scrool){
+  setScroll(true)
+  }else{
+    setScroll(false)
+    
+  }
+  console.log(scroll);
+}
   return (
-    <div className={styled.navbar}>
+    <div style={{ backgroundColor:scroll?'white' :'tranparent'}} className={styled.navbar}>
       <div className={styled.container}> 
       <div className={styled.navbar_left}>
         <Link to={''}><img src="https://preview.colorlib.com/theme/cozastore/images/icons/logo-01.png.webp" alt="" /></Link>
