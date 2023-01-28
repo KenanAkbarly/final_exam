@@ -12,7 +12,7 @@ const data = useSelector((state)=> state.addToFav.value)
     <div className={styled.navbar}>
       <div className={styled.container}> 
       <div className={styled.navbar_left}>
-        <img src="https://preview.colorlib.com/theme/cozastore/images/icons/logo-01.png.webp" alt="" />
+        <Link to={''}><img src="https://preview.colorlib.com/theme/cozastore/images/icons/logo-01.png.webp" alt="" /></Link>
       <div className={styled.navbar_middle}>
       <Link to={''}>Home</Link>
       <Link to={'add'}>Add</Link>

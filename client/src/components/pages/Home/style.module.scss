@@ -30,6 +30,7 @@
                     color: white;
                     transition: all 0.3s ease;
                     border: none;
+                    margin-top: 20px;
                     &:hover{
                         background-color: black;
 
@@ -198,9 +199,13 @@
                 width: 500px;
                 display: flex;
                 justify-content: space-between;
+                transition: all 0.3s ease;
                 span{
+                    height: 30px;
+                    margin-top: 10px;
                     &:hover{
                         border-bottom: 1px solid black;
+                        cursor: pointer;
                     }
                 }
             }
