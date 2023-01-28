@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios'
 import toast from 'react-hot-toast';
+import {Helmet} from "react-helmet";
 
 const Add = () => {
     const formik = useFormik({
@@ -84,6 +85,11 @@ const Add = () => {
        <button type="submit">Submit</button>
      </form>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Add</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
     </div>
   )
 }

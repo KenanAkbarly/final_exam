@@ -6,6 +6,7 @@ import axios from 'axios'
 import { AiOutlineHeart } from 'react-icons/ai';
 import { useDispatch } from 'react-redux'
 import { addToFav } from '../../../redux/slice/FavSlice'
+import {Helmet} from "react-helmet";
 
 const Detail = () => {
     const {id} = useParams()
@@ -37,6 +38,11 @@ const Detail = () => {
                             <button onClick={()=> dispatch(addToFav(item))} className={styled.btnWishlit}>Add Wislist</button>
                         </div>
                     </div>
+                    <Helmet>
+                <meta charSet="utf-8" />
+                <title>{item.name}</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
     </div>
   )
 }

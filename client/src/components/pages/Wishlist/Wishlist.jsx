@@ -4,7 +4,7 @@ import { removeFromFav } from '../../../redux/slice/FavSlice'
 import styled from './style.module.scss'
 import { AiOutlineHeart } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-
+import {Helmet} from "react-helmet";
 const Wishlist = () => {
 const data = useSelector((state)=> state.addToFav.value)
 const dispatch = useDispatch()
@@ -34,7 +34,11 @@ const dispatch = useDispatch()
                 })
             }
             
-          
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Wishlist</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         </div>
         </div>
     </div>
